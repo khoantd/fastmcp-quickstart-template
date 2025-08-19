@@ -11,11 +11,15 @@ This repository contains a simple echo server example that demonstrates FastMCP 
 
 ### Deployment
 
-This repository is ready to deploy! Click the "Deploy" button in your FastMCP dashboard to get started.
+This repository is ready to be deployed!
+
+- Create a new [FastMCP Cloud account](http://fastmcp.cloud/signup)
+- Connect your GitHub account
+- Select `Clone our template` and a deployment will be created for you!
 
 ### Learn More
 
-- [FastMCP Documentation](https://github.com/jlowin/fastmcp)
+- [FastMCP Documentation](https://gofastmcp.com/)
 - [MCP Protocol](https://modelcontextprotocol.io/)
 
 ---
