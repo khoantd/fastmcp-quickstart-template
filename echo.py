@@ -2,29 +2,11 @@
 FastMCP Echo Server
 """
 
-from fastmcp import FastMCP
+import sys
+from pathlib import Path
 
-# Create server
-mcp = FastMCP("Echo Server")
+SRC = (Path(__file__).resolve().parent / "src").as_posix()
+if SRC not in sys.path:
+    sys.path.insert(0, SRC)
 
-
-@mcp.tool
-def echo_tool(text: str) -> str:
-    """Echo the input text"""
-    return text
-
-
-@mcp.resource("echo://static")
-def echo_resource() -> str:
-    return "Echo!"
-
-
-@mcp.resource("echo://{text}")
-def echo_template(text: str) -> str:
-    """Echo the input text"""
-    return f"Echo: {text}"
-
-
-@mcp.prompt("echo")
-def echo_prompt(text: str) -> str:
-    return text
+from server.app import mcp  # noqa: E402,F401
